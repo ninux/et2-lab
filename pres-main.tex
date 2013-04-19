@@ -1,0 +1,60 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{beamerthemeshadow}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bchart}
+\usepackage{wrapfig}
+\usepackage{ulem}
+\usepackage{color}
+
+\usepackage[
+	european,
+	europeanvoltages,
+	europeanresistors,
+	europeanports
+	]{circuitikz}
+
+
+\definecolor{darkgreen}{rgb}{0.2,0.6,0.2}
+
+\usepackage{listings}
+
+\title{Laborübung Parallelschwingkreis}
+\subtitle{}
+\author{E. Mazlagic\', A. Schmid}
+\institute{Hochschule Luzern \\ Technik \& Architektur}
+
+\begin{document}
+\maketitle
+
+% Listing settings
+\lstset{
+    breakwhitespace=true,
+    language=[LaTeX]TeX,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{red}\bfseries,
+    idnetifierstyle=\color{blue},
+    commentstyle=\color{darkgreen},
+    stringstyle=\color{blue},
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=3,
+    showstringspaces=false,
+    extendedchars=truei
+    morekeywords={
+	\begin, 
+	\item,
+	\end}
+}
+
+\input{aufgabe}
+\input{resultate}
+
+\end{document}
