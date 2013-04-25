@@ -4,21 +4,26 @@
 
 \begin{frame}
 	\frametitle{Schaltung}
-	\begin{circuitikz}[scale=1]\draw
-		(0,0) node[anchor=north]{B}
-		to[short, o-*](2,0)
-		to[L=10mH, *-*](2,2)
-		to[R=100k, *-o](0,2)
-		(2,2) to[short, *-*](4,2)
-		to[C=10nF, *-*](4,0)
-		(2,0) to[short, *-*](4,0)
-		(4,0) to[short, *-o](6,0)
-		(4,2) to[short, *-o](6,2)
-		(6,2) node[anchor=south]{C}
-		(6,0) node[anchor=north]{D}
-		(0,2) node[anchor=south]{A}
-		(-2,2) to[sI](-2,0) 
-		(-2,2) to[short](-1,2)
-		(-2,0) to[short](-1,0)
-	;\end{circuitikz}
+	\begin{figure}
+		\centering
+		\begin{circuitikz}[scale=1.1]\draw
+			(0,0) node[anchor=north]{B}
+			to[short, o-*](2,0)
+			to[L, l_=10mH, *-*](2,2)
+			to[R, l_=100k$\Omega$, *-o](0,2)
+			(2,2) to[short, *-*](4,2)
+			to[C=10nF, *-*](4,0)
+			(2,0) to[short, *-*](4,0)
+			(4,0) to[short, *-o](6,0)
+			(4,2) to[short, *-o](6,2)
+			(6,2) node[anchor=south]{C}
+			(6,0) node[anchor=north]{D}
+			(0,2) node[anchor=south]{A}
+			(-2,2) to[sI, l^=$f\neq kosnt.$](-2,0)
+			(-2,2) to[short](-1,2)
+			(-2,0) to[short](-1,0)
+			(6,0.2) to[open, v=$v(f)$] (6,1.8);
+		\end{circuitikz}
+		\caption{Schaltung aus Aufgabe 5, ET2-Labor Teil 2}
+	\end{figure}
 \end{frame}

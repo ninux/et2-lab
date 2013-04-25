@@ -6,3 +6,4 @@
 \beamer@subsectionintoc {2}{1}{Beobachtung}{3}{0}{2}
 \beamer@subsectionintoc {2}{2}{$f_0$ berechnet}{4}{0}{2}
 \beamer@subsectionintoc {2}{3}{$f_0$ ermittelt}{5}{0}{2}
+\beamer@subsectionintoc {2}{4}{Sweap}{6}{0}{2}
