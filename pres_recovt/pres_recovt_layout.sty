@@ -1,0 +1,65 @@
+% coding:utf-8
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{beamerthemeshadow}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{bchart}
+\usepackage{wrapfig}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{epigraph}
+\usepackage{tipa}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{tikz-timing}
+\usepackage{tikz-timing-beamer}
+
+\usepackage[
+	european,
+	europeanvoltages,
+	europeanresistors,
+	europeanports
+	]{circuitikz}
+
+% \usepackage{pgf-pie}
+
+\definecolor{darkgreen}{rgb}{0.2,0.6,0.2}
+
+\usepackage{listings}
+
+% Listing settings
+\lstset{
+%    morekeywords={\tableofcontents},
+    breakwhitespace=true,
+    language=[LaTeX]TeX,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{red}\bfseries,
+    idnetifierstyle=\color{blue},
+    commentstyle=\color{darkgreen},
+    stringstyle=\color{blue},
+    columns=fullflexible,
+    keepspaces=true,
+    breaklines=true,
+    tabsize=3,
+    showstringspaces=false,
+    extendedchars=true,
+    literate= {Ö}{{\"O}}1
+    	      {ö}{{\"o}}1
+              {Ä}{{\"A}}1
+              {ä}{{\"a}}1
+              {Ü}{{\"U}}1
+              {ü}{{\"u}}1,
+    morekeywords={
+	\begin, 
+	\item,
+	\end,
+	\tableofcontents}
+}
+
