@@ -1,0 +1,54 @@
+\documentclass[10pt, a4paper, fleqn]{article}
+
+
+\usepackage[utf8]{inputenc} % utf8x kann alle
+                                % Textcodierungen
+                                % interpretieren
+\usepackage[T1]{fontenc} % Schriftcodierung mit UTF-8
+\usepackage{textcomp} % Erweiterung von fontenc
+
+\usepackage[ngerman]{babel}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\section{Kapazitätsmessung einer Diode}
+
+Wir nehmen ein LC-Meter und messen damit die Kapazität einer Diode.
+Hierzu entkoppeln wir die Schaltung mit einer Kapazität gegenüber dem
+LC-Meter, so werden die DC-Anteile hin zum LC-Meter gefiltert. 
+Auf der anderen Seite schliessen wir eine DC-Spannungsquelle
+$V_q$ an um die Diode in Sperrrichtung zu betrieben. Die Spannung 
+der Quelle liegt dabei im Bereich $0-40V$, was für eine Diode vom Typ
+1N4007 weit unter deren Durchbruchspannung liegt, d.h. wir keinen 
+Kurzschluss damit erzeugen. Der Wirderstand zwischen Quelle und 
+Diode dient der Entkopplung (dies war zuerst mit einer Induktivität
+realisiert worden, hatte aber die Messung negativ beeinflusst).
+
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}[scale=1]\draw
+		% (0,0) node[anchor=east] {GND}
+		% (0,0) to[short, o-*] (2,0)
+		(2,0) to[C=$C_L$, *-*] (2,2)
+		(1,2) node[anchor=east] {LC-Meter}
+		(1,2) to[short, o-*] (2,2)
+		(2,2) to[C=$100nF$, *-*] (4,2)
+		(2,0) to[short, *-*] (4,0)
+		(4,0) to[D, l_=1N4007, *-*] (4,2)
+		(4,2) to[R=$100k\Omega$, *-] (8,2)
+		(4,0) to[short, *-] (8,0)
+		(8,0) to[V, l_=$V_q$, ] (8,2)
+		(2,0) node[ground] {};
+	\end{circuitikz}
+	\caption{Messschaltung}
+\end{figure}
+
+Mit diesem Aufbau wurde dann die Kapazizät ermittelt zu verschiedenen
+Spannungen von $V_q$. 
+
+
+
+\end{document}
