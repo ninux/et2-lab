@@ -2,3 +2,6 @@
 *.toc
 *.swp
 *.log
+*.nav
+*.out
+*.snm
