@@ -4,15 +4,33 @@
 
 \subsection{Messaufbau}
 \begin{frame}
-Bild
-%   \begin{figure}
-%     \includegraphics[width=1.0\columnwidth]{fig/ti_ds_dco_freq.pdf}
-%     \caption{Auszug aus dem Datenblatt des MSP430G2553}
-%   \end{figure}
+\frametitle{Messaufbau}
+\begin{figure}[h!]
+  \begin{circuitikz}[scale=1]\draw
+    % (0,0) node[anchor=east] {GND}
+    % (0,0) node[anchor=east] {GND}
+    % (0,0) to[short, o-*] (2,0)
+    (0,0) to[V, l=$V_q$, ] (0,4)
+    (2,4) to[R=$10$k$\Omega$, -*] (2,2)
+    (2,2) to[D, l=D, *-*] (2,0)
+    (0,4) to[short, -*] (2,4)
+    (0,0) to[short, -*] (2,0)
+    (2,4) to[short, *-o] (4,4)
+    (2,2) to[short, *-o] (4,2)
+    (2,0) to[short, *-o] (4,0)
+    (4,4) node[anchor=west] {CH1}
+    (4,2) node[anchor=west] {CH2}
+    (4,0) node[anchor=west] {GND}
+%     (6,2) node[anchor=west] {KO}
+    (2,0) node[ground] {};
+  \end{circuitikz}
+  \caption{Messschaltung}
+\end{figure}
 \end{frame}
 
 \subsection{Erwartung}
 \begin{frame}
+\frametitle{Erwartung}
   \begin{itemize}
     \item 1N4007 relativ langsam
     \item 1N4148 schneller
@@ -23,24 +41,36 @@ Bild
 \subsection{Ergebnisse}
 \subsubsection{1N4007}
 \begin{frame}
+\frametitle{Ergebnisse}
   \begin{figure}
-    \includegraphics[width=1.0\columnwidth]{fig/scope_18.png}
+    \includegraphics[width=0.7\columnwidth]{fig/scope_18.png}
     \caption{1N4007}
   \end{figure}
 \end{frame}
 
 \subsubsection{1N4148}
 \begin{frame}
+\frametitle{Ergebnisse}
   \begin{figure}
-    \includegraphics[width=1.0\columnwidth]{fig/scope_19.png}
+    \includegraphics[width=0.7\columnwidth]{fig/scope_19.png}
     \caption{1N4148}
   \end{figure}
 \end{frame}
 
-% \subsection{BAT81}
-% \begin{frame}
-%   \begin{figure}
-%     \includegraphics[width=1.0\columnwidth]{fig/scope_20.png}
-%     \caption{BAT81}
-%   \end{figure}
-% \end{frame}
+\subsubsection{BAT81}
+\begin{frame}
+\frametitle{Ergebnisse}
+  \begin{figure}
+    \includegraphics[width=0.7\columnwidth]{fig/scope_20_2.png}
+    \caption{BAT81}
+  \end{figure}
+\end{frame}
+
+\subsection{Fazit}
+\begin{frame}
+\frametitle{Fazit}
+  \begin{itemize}
+    \item 1N4148 ist viel schneller als 1N4007
+    \item BAT81 ist langsamer als 1N4148
+  \end{itemize}
+\end{frame}
